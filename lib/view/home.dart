@@ -85,54 +85,52 @@ class HomeScreen extends StatelessWidget {
 
   ListTile buildTile(DoctorsModel doctor) {
     return ListTile(
-      onTap: () {},
-      title: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            height: 80,
-            width: 80,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: const Color(0xFFFFECB1)),
-            child: Image.asset(
-              doctor.imgPath,
-              fit: BoxFit.cover,
+        onTap: () {},
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: const Color(0xFFFFECB1)),
+              child: Image.asset(
+                doctor.imgPath,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          const SizedBox(width: 16),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                doctor.name,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                doctor.specialization,
-                style:
-                    const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-              ),
-              SizedBox(height: 10),
-              Text(
-                doctor.hospital,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
-        ],
-      ),
-      trailing: IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          Icons.videocam,
-          color: Colors.green,
-          size: 32,
+            const SizedBox(width: 16),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  doctor.name,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  doctor.specialization,
+                  style: const TextStyle(
+                      fontSize: 12, fontWeight: FontWeight.w500),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  doctor.hospital,
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+          ],
         ),
-      ),
-    );
+        trailing: TextButton(
+          onPressed: () {},
+          child: Text(
+            'Book',
+            style: TextStyle(color: Color.fromARGB(255, 26, 132, 30)),
+          ),
+        ));
   }
 }
